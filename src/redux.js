@@ -2,13 +2,15 @@
 const API_CALL_REQUEST = "API_CALL_REQUEST";
 const API_CALL_SUCCESS = "API_CALL_SUCCESS";
 const API_CALL_FAILURE = "API_CALL_FAILURE";
+const ADD_IDEA = "ADD_IDEA"
 
 // reducer with initial state
 const initialState = {
   fetching: false,
   dog: [],
   error: null,
-  input: ''
+  input: '',
+  ideas: []
 };
 
 export function reducer(state = initialState, action) {
@@ -21,6 +23,9 @@ export function reducer(state = initialState, action) {
       break;
     case API_CALL_FAILURE:
       return { ...state, fetching: false, dog: null, error: action.error };
+    case ADD_IDEA:
+      console.log(state)
+      return { ...state, ideas: [...state.ideas, action.payload]}
     default:
       return state;
   }

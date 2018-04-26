@@ -7,9 +7,9 @@ import { connect } from 'react-redux';
 import IdeasContainer from './IdeasContainer';
 
 class App extends Component {
-  
 
-  dogs = () => this.props.dog.map(d => <img src={d || logo} className='App-logo' alt='logo' />)
+
+  dogs = () => this.props.dog.map(d => <img src={d} className='App-logo' alt='logo' />)
 
   render() {
     const { fetching, dog, onRequestDog, error } = this.props
