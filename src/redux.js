@@ -7,7 +7,8 @@ const API_CALL_FAILURE = "API_CALL_FAILURE";
 const initialState = {
   fetching: false,
   dog: [],
-  error: null
+  error: null,
+  input: ''
 };
 
 export function reducer(state = initialState, action) {
