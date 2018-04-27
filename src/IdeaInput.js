@@ -11,7 +11,7 @@ class IdeaInput extends Component {
 
   handleSend = (e) => {
     e.preventDefault()
-    if(this.state.input !== '')
+    if(this.state.input)
     this.props.addIdea(this.state.input)
     this.setState({
       input: ''
