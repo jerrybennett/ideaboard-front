@@ -26,6 +26,8 @@ export function reducer(state = initialState, action) {
     case ADD_IDEA:
       console.log(state)
       return { ...state, ideas: [...state.ideas, action.payload]}
+    // case DELETE_IDEA:
+    //   return { ...state, ideas: [...state.ideas, action.payload]}
     default:
       return state;
   }
